@@ -1,0 +1,26 @@
+Changelog
+Este archivo contiene el registro de los cambios realizados en el proyecto. Asegúrate de revisar los detalles antes de cada actualización.
+
+[1.0.0] - 2024-11-11
+Añadido
+Estructura inicial del proyecto:
+Archivos base: index.html, styles/main.css, scripts/main.js.
+Carpeta /components/ para almacenar componentes reutilizables como header, footer, about, y contact.
+Carpeta /pages/ para gestionar las páginas y servicios (cada servicio tendrá su propio archivo HTML, CSS y JS).
+Implementación básica de la carga dinámica de componentes usando fetch() en el archivo index.html.
+Corregido
+No se han corregido errores específicos en esta versión, ya que es la versión de estructura inicial.
+Actualización
+Se organizó el código y las carpetas para la modularización futura, preparando el proyecto para una fácil expansión de servicios.
+Removido
+No se han eliminado funcionalidades ya que este es el primer paso del desarrollo.
+[0.1.0] - 2024-11-01
+Añadido
+Estructura básica del proyecto con los primeros archivos HTML, CSS y JavaScript para pruebas.
+Corregido
+Ajustes menores en la estructura del proyecto para mejorar la claridad.
+Actualización
+Reorganización de los archivos para mejorar la escalabilidad y facilitar la futura integración de servicios.
+Notas sobre las versiones:
+1.0.0 es la versión inicial con la estructura básica del proyecto.
+0.1.0 es la versión preliminar, que solo contiene la estructura de los primeros archivos para pruebas.
