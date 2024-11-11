@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones de Software</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div id="header"></div>
+    <div id="pages"></div>
+    <div id="about"></div>
+    <div id="contact"></div>
+    <div id="footer"></div>
+
+    <script>
+        async function loadComponent(id, url) {
+            const container = document.getElementById(id);
+            const response = await fetch(url);
+            container.innerHTML = await response.text();
+        }
+
+        loadComponent('header', '/components/header/header.html');
+        loadComponent('about', '/components/about/about.html');
+        loadComponent('pages', '/pages/page.html'); 
+        loadComponent('contact', '/components/contact-info/contact-info.html');
+        loadComponent('footer', '/components/footer/footer.html');
+    </script>
+</body>
+</html>
