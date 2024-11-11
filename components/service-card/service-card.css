@@ -1,0 +1,56 @@
+/* Sección de Servicios */
+.service-card {
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out; /* Efecto de desvanecimiento */
+}
+
+/* Efecto de Hover */
+.service-card:hover {
+    transform: translateY(-10px); /* Desplazamiento vertical al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de la Card */
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Título de la Card */
+.service-card h3 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+/* Descripción de la Card */
+.service-card p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Enlace de la Card */
+.service-card a {
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Hover en Enlace */
+.service-card a:hover {
+    text-decoration: underline;
+}
+
+/* Para hacer visible la tarjeta en el JS */
+.service-card.visible {
+    opacity: 1;
+}
