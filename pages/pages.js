@@ -1,10 +1,22 @@
+// Verificar si el usuario ha iniciado sesión
+const loggedinUser = localStorage.getItem("loggedinUser");
+if (!loggedinUser) {
+    alert("Primero inicia sesión");
+    window.location.href = "../../index.html";
+}
+
+// Función de cierre de sesión
+document.getElementById("logout-btn").addEventListener("click", function() {
+    localStorage.removeItem("loggedinUser");
+    window.location.href = "../../index.html";
+});
 
 // Función para cargar dinámicamente los servicios desde sus carpetas
 async function loadService(serviceName) {
-    const serviceContainer = document.getElementById('pages');
-    const htmlResponse = await fetch(`/pages/${serviceName}/${serviceName}.html`);
-    const cssResponse = await fetch(`/pages/${serviceName}/${serviceName}.css`);
-    const jsResponse = await fetch(`/pages/${serviceName}/${serviceName}.js`);
+    //const serviceContainer = document.getElementById('pages');
+    //const htmlResponse = await fetch(`/pages/${serviceName}/${serviceName}.html`);
+    //const cssResponse = await fetch(`/pages/${serviceName}/${serviceName}.css`);
+   // const jsResponse = await fetch(`/pages/${serviceName}/${serviceName}.js`);
 
     const serviceHTML = await htmlResponse.text();
     const serviceCSS = await cssResponse.text();
