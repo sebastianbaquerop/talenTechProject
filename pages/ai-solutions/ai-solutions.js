@@ -8,7 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const infoContent = document.getElementById("info-content");
 
     let currentIndex = 0;
-    const cardWidth = cards[0].offsetWidth + 20; // Width + gap
+    const updateCardWidth = () => {
+        // Calcular el ancho de las tarjetas de acuerdo al tamaño de pantalla
+        const cardWidth = cards[0].offsetWidth + 20; // Añadir el margen
+        return cardWidth;
+    };
 
     // Información extra por índice
     const infoData = [
@@ -36,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Función para actualizar la posición del carrusel
     function updateCarousel() {
+        const cardWidth = updateCardWidth(); // Obtener el ancho de la tarjeta actualizado
         const offset = -currentIndex * cardWidth;
         carouselContainer.style.transform = `translateX(${offset}px)`;
         // Mostrar/ocultar botones de navegación
@@ -81,10 +86,13 @@ document.addEventListener("DOMContentLoaded", () => {
             infoDynamic.classList.add("info-visible");
         });
     });
-    
-    document.getElementById("back-btn").addEventListener("click", function () {
-        window.location.href = "../page.html";
+
+    // Redirigir al hacer clic en el botón de regreso
+    document.getElementById("back-btn").addEventListener("click", () => {
+        window.history.back(); // Regresar a la página anterior
     });
+
+
     document.getElementById("back-btn-arrow").addEventListener("click", function () {
         window.location.href = "../page.html";
     });
@@ -92,3 +100,4 @@ document.addEventListener("DOMContentLoaded", () => {
     // Inicializa la visibilidad de los botones de navegación al cargar
     updateNavigationButtons();
 });
+

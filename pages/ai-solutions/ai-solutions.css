@@ -275,3 +275,26 @@
 }
 
 
+/* Media queries para hacer el carrusel responsivo */
+@media (min-width: 1200px) {
+    .carousel-card {
+        width: 300px; /* En pantallas grandes, cada tarjeta tiene un ancho fijo */
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .carousel-card {
+        width: 250px; /* En tabletas y pantallas medianas */
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-card {
+        width: 100%; /* En pantallas móviles, cada tarjeta ocupa el 100% del ancho */
+    }
+
+    .carousel-button {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
