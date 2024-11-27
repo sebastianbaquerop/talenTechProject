@@ -1,4 +1,25 @@
 /* General */
+
+/* Estilos para el botón de regresar */
+.back-arrow-button {
+    background-color: #1f6feb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    display: block;
+}
+
+.back-icon {
+    margin-left: 5px;
+}
+
 #servicios {
     font-family: Arial, sans-serif;
     padding: 20px;

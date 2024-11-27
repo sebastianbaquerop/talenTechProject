@@ -85,6 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("back-btn").addEventListener("click", function () {
         window.location.href = "../page.html";
     });
+    document.getElementById("back-btn-arrow").addEventListener("click", function () {
+        window.location.href = "../page.html";
+    });
 
     // Inicializa la visibilidad de los botones de navegación al cargar
     updateNavigationButtons();
