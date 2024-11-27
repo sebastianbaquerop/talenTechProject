@@ -1,13 +1,300 @@
-.service-container {
+/* General */
+
+/* Estilos para el botón de regresar */
+.back-arrow-button {
+    background-color: #1f6feb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    display: block;
+}
+
+.back-icon {
+    margin-left: 5px;
+}
+
+#servicios {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f9; /* Fondo claro */
+    color: #333;
+}
+
+#servicios h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1f6feb;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.carousel-container {
     display: flex;
-    justify-content: space-around;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+    padding: 20px;
+}
+
+.carousel-card {
+    flex: 0 0 80%;
+    max-width: 80%;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-card:hover {
+    transform: scale(1.05);
+}
+
+/* .carousel-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+} */
+/* Ajuste del tamaño fijo para las imágenes */
+.carousel-card img {
+    width: 100%;
+    height: 200px; /* Ajusta esta altura según tus necesidades */
+    object-fit: cover; /* Asegura que las imágenes se recorten correctamente */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.carousel-card h3 {
+    font-size: 1.5rem;
+    color: #1f6feb;
+}
+
+.carousel-card p {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #666;
+}
+
+.carousel-card a {
+    color: #1f6feb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.carousel-card a:hover {
+    text-decoration: underline;
+}
+
+.carousel-card .info-button {
+    background-color: #1f6feb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-card .info-button:hover {
+    background-color: #164d8b;
+    transform: scale(1.05);
+}
+
+.carousel-button .info-button:active {
+    transform: scale(0.98);
+}
+
+
+/* Carousel Buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1f6feb;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(31, 111, 235, 0.3);
+    transition: background 0.3s ease;
+}
+
+.carousel-button:hover {
+    background: #58a6ff;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* info button */
+
+
+/* Estilos generales */
+#info-dinamica {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Ocultar inicialmente */
+.info-hidden {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Mostrar información al activar */
+.info-visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Contenedor de Beneficios */
+.benefits {
+    background-color: #1f6feb;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefits h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.benefits ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos para los elementos de la lista de beneficios */
+.benefits li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer; /* Indica que es interactivo */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Ícono de lista */
+.benefits li::before {
+    content: "✔️";
+    color: white;
+    font-size: 18px;
+}
+
+/* Efecto hover */
+.benefits li:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Cambia a un color más claro */
+    transform: scale(1.05); /* Amplía ligeramente */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Agrega sombra */
+}
+
+/* Efecto de selección activa */
+.benefits li:active {
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: scale(0.95); /* Reduce ligeramente en clic */
+    box-shadow: none; /* Quita la sombra */
+}
+
+/* Botón de regresar */
+.button-container {
+    text-align: center;
     margin: 20px 0;
 }
 
-.service-card {
-    width: 300px;
-    padding: 15px;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    text-align: center;
+.back-button {
+    background-color: #1f6feb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #164d8b;
+    transform: scale(1.05);
+}
+
+.back-button:active {
+    transform: scale(0.98);
+}
+
+
+/* Media queries para hacer el carrusel responsivo */
+@media (min-width: 1200px) {
+    .carousel-card {
+        width: 300px; /* En pantallas grandes, cada tarjeta tiene un ancho fijo */
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .carousel-card {
+        width: 250px; /* En tabletas y pantallas medianas */
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-card {
+        width: 100%; /* En pantallas móviles, cada tarjeta ocupa el 100% del ancho */
+    }
+
+    .carousel-button {
+        padding: 8px;
+        font-size: 16px;
+    }
 }
