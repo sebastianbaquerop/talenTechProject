@@ -1,12 +1,71 @@
 <section id="servicios">
-    <div class="service-container">
-        <div class="service-card">
-            <img src="images/ia.jpg" alt="Soluciones IA">
-            <h3>Soluciones IA</h3>
-            <p>Inteligencia Artificial para optimizar tus procesos empresariales.</p>
-            <a href="#">Más información</a>
+    <h2>Soluciones IA</h2>
+    <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-card">
+                <img src="images/automatizacion-inteligente.png" alt="Automatización Inteligente">
+                <h3>Automatización Inteligente</h3>
+                <p>Optimización de tareas repetitivas usando IA, como chatbots, clasificación de correos y flujos de
+                    trabajo automatizados.</p>
+                <button class="info-button">Más información</button>
+            </div>
+            <div class="carousel-card">
+                <img src="images/analisis-de-datos.jpeg" alt="Análisis de Datos y Predicciones">
+                <h3>Análisis de Datos y Predicciones</h3>
+                <p>Uso de modelos de IA para identificar patrones, realizar predicciones y ofrecer insights accionables.
+                </p>
+                <button class="info-button">Más información</button>
+            </div>
+            <div class="carousel-card">
+                <img src="images/reconocimiento-de-imagenes.jpeg" alt="Reconocimiento de Imágenes">
+                <h3>Reconocimiento de Imágenes</h3>
+                <p>IA para detectar y clasificar objetos, análisis de imágenes médicas o sistemas de vigilancia.</p>
+                <button class="info-button">Más información</button>
+            </div>
+            <div class="carousel-card">
+                <img src="images/procesamiento-lenguaje-natural.png" alt="Procesamiento del Lenguaje Natural (NLP)">
+                <h3>Procesamiento del Lenguaje Natural (NLP)</h3>
+                <p>Chatbots, generación de texto, análisis de sentimiento y traducción automática.</p>
+                <button class="info-button">Más información</button>
+            </div>
+            <div class="carousel-card">
+                <img src="images/recomendaciones-personalizadas.jpeg" alt="Personalización y Recomendaciones">
+                <h3>Personalización y Recomendaciones</h3>
+                <p>Sistemas de recomendación personalizados, como los usados en comercio electrónico o plataformas de
+                    contenido.</p>
+                <button class="info-button">Más información</button>
+            </div>
+        </div>
+        <button class="carousel-button prev">❮</button>
+        <button class="carousel-button next">❯</button>
+    </div>
+
+    <!-- Contenedor para información dinámica -->
+    <div id="info-dinamica" class="info-hidden">
+        <h3 id="info-title"></h3>
+        <p id="info-content"></p>
+    </div>
+
+    <div class="extras-container">
+        <!-- Sección de Beneficios -->
+        <h2>Beneficios</h2>
+        <div class="benefits">
+            <ul>
+                <li>Incremento de la productividad</li>
+                <li>Reducción de costos operativos</li>
+                <li>Mejora en la experiencia del usuario</li>
+                <li>Mayor precisión en análisis y predicciones</li>
+                <li>Salud y Bienestar</li>
+            </ul>
         </div>
     </div>
+
+    <!-- Botón de regresar -->
+    <div class="button-container">
+        <button id="back-btn" class="back-button">Regresar</button>
+    </div>
+
 </section>
-<link rel="stylesheet" href="/components/ai-solutions/ai-solutions.css">
-<script src="/components/ai-solutions/ai-solutions.js"></script>
+
+<link rel="stylesheet" href="ai-solutions.css">
+<script src="ai-solutions.js"></script>
