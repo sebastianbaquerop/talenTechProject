@@ -6,7 +6,9 @@
     color: #ffffff;
     text-align: center;
     overflow: hidden;
-    cursor:none
+    cursor:none;
+    height: -webkit-fill-available;
+    align-content: center;
 }
 
 /* Fondo decorativo */
