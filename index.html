@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soluciones de Software</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="styles/main.css">
 </head>
+
 <body>
+    <!-- Contenedor de la página -->
     <div id="header"></div>
-    <div id="team"></div>
-    <div id="about"></div>
-    <div id="contact"></div>
+    <div id="team" class="page-section"></div>
+    <div id="about" class="page-section"></div>
+    <div id="contact" class="page-section"></div>
+
+    <div class="floating-dots">
+        <a href="#team" class="dot" data-section="team"></a>
+        <a href="#about" class="dot" data-section="about"></a>
+        <a href="#contact" class="dot" data-section="contact"></a>
+    </div>
     <div id="footer"></div>
-    
     <script>
         async function loadComponent(id, url) {
             const container = document.getElementById(id);
@@ -26,7 +36,7 @@
          loadComponent('footer', './components/footer/footer.html');
 
     </script>
-   
 </body>
+
 </html>
 <script src="../components/header/header.js"></script>

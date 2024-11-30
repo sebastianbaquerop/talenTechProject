@@ -80,4 +80,44 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     alert("¡Formulario enviado exitosamente!");
 });
 
+document.addEventListener("scroll", () => {
+    const sections = document.querySelectorAll(".page-section");
+    const navLinks = document.querySelectorAll("#header nav a");
+
+    sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const id = section.getAttribute("id");
+
+        if (rect.top <= 100 && rect.bottom >= 100) {
+            navLinks.forEach((link) => link.classList.remove("active"));
+            document.querySelector(`#header nav a[href="#${id}"]`).classList.add("active");
+        }
+    });
+});
+
+// Manejo de puntos flotantes y secciones
+document.addEventListener("scroll", () => {
+    const sections = document.querySelectorAll(".page-section");
+    const dots = document.querySelectorAll(".floating-dots .dot");
+
+    sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        const id = section.getAttribute("id");
+
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            dots.forEach((dot) => dot.classList.remove("active"));
+            document.querySelector(`.floating-dots .dot[data-section="${id}"]`).classList.add("active");
+        }
+    });
+});
+
+// Scroll suave al hacer clic en un punto
+document.querySelectorAll(".floating-dots .dot").forEach((dot) => {
+    dot.addEventListener("click", (event) => {
+        event.preventDefault();
+        const targetId = dot.getAttribute("data-section");
+        const targetSection = document.getElementById(targetId);
+        targetSection.scrollIntoView({ behavior: "smooth" });
+    });
+});
 

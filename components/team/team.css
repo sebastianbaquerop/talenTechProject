@@ -1,0 +1,126 @@
+/* General */
+.team-section {
+    position: relative;
+    padding: 100px 32px;
+    background: linear-gradient(135deg, #8c9ac3, #28385c);
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    cursor:none
+}
+
+/* Fondo decorativo */
+.background-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.circle,
+.triangle,
+.square {
+    position: absolute;
+    opacity: 0.1;
+    animation: float 6s infinite;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background: #77839d;
+    border-radius: 50%;
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 150px solid #788ba9;
+    top: 40%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+.square {
+    width: 120px;
+    height: 120px;
+    background: #8096af;
+    bottom: 10%;
+    left: 30%;
+    animation-delay: 4s;
+}
+
+/* Flotación animada */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Títulos */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #e0f2fe;
+}
+
+/* Contenedor de tarjetas */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    cursor: none;
+}
+
+/* Tarjetas del equipo */
+.team-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: none;
+    text-align: center;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Foto del equipo */
+.team-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ced4e2;
+}
+
+/* Rol y descripción */
+.team-role {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #cbd5e1;
+}
+
+.team-description {
+    font-size: 1rem;
+    color: #f8fafc;
+}
+
+/* Animaciones de Hover */
+.team-card:hover {
+    box-shadow: 0 10px 20px white;
+}
