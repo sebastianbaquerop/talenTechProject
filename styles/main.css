@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Noto Sans", sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -16,37 +16,7 @@ a {
     color: inherit;
 }
 
-/* Header */
-header {
-    background-color: #333;
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
-}
 
-header .logo img {
-    height: 40px;
-}
-
-nav .navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-}
-
-nav .navbar ul li a {
-    color: #fff;
-    font-weight: 600;
-    padding: 10px;
-}
-
-nav .navbar ul li a:hover {
-    background-color: #555;
-}
 
 /* Sección de Servicios */
 #servicios {
@@ -208,4 +178,101 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth; /* Habilita el scroll suave */
+}
+
+/* Secciones de la página */
+.page-section {
+    min-height: 80vh; /* Cada sección ocupa al menos la altura de la pantalla */
+}
+
+/* Header fijo */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    padding: 10px;
+}
+
+#header nav a:hover, #header nav a.active {
+    text-decoration: underline;
+}
+
+/* Resto de la página */
+#about {
+    background-color: #f4f4f4;
+}
+
+#pages {
+    background-color: #eaeaea;
+}
+
+#contact {
+    background-color: #d4d4d4;
+}
+
+#footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Contenedor de puntos flotantes */
+.floating-dots {
+    position: fixed;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999;
+}
+
+/* Estilo de cada punto */
+.floating-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #bdbfc3;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.floating-dots .dot:hover,
+.floating-dots .dot.active {
+    background-color: #393a3a;
+    transform: scale(1.2);
+}
+
+/* Aumenta el tamaño de los puntos en pantallas pequeñas */
+@media (max-width: 768px) {
+    .floating-dots .dot {
+        width: 16px;
+        height: 16px;
+    }
 }
