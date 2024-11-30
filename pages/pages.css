@@ -123,9 +123,22 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
-    font-size: 0.9rem;
+    width: 100%;
+    margin-top: auto; /* Empuja el footer hacia el fondo si no hay suficiente contenido */
 }
 
+footer .contact-info p {
+    margin-bottom: 10px;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    color: #fff;
+}
+
+footer .social-links a:hover {
+    color: #007BFF;
+}
 /* Responsivo */
 @media (max-width: 768px) {
     .card {
