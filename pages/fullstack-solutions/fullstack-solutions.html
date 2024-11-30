@@ -1,3 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soluciones Full Stack</title>
+  <link rel="stylesheet" href="fullstack-solutions.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Soluciones Full Stack</h1>
+      <ul>
+        <li><a href="#quienes-somos">¿Quiénes Somos?</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proceso">Nuestro Proceso</a></li>
+        <li><a href="#contacto">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<link rel="stylesheet" href="/pages/fullstack-solutions/fullstack-solutions.css">
-<script src="/pages/fullstack-solutions/fullstack-solutions.js"></script>
+  <main>
+    <section id="quienes-somos">
+      <h2>¿Quiénes Somos?</h2>
+      <p>En <strong>[ Fullstack-Solutions ]</strong>, ofrecemos soluciones Full Stack completas, desde el diseño Frontend hasta el Backend y bases de datos.</p>
+      <img src="02.jpg" alt="Equipo de trabajo" class="responsive-image">
+    </section>
+
+    <section id="servicios">
+      <h2>¿Qué Ofrecemos?</h2>
+      <div class="service-card">
+        <img src="03.jpg" alt="Desarrollo Frontend" class="responsive-image">
+        <h3>Frontend</h3>
+        <p>Diseños responsivos e intuitivos con React, Angular y más.</p>
+      </div>
+      <div class="service-card">
+        <img src="04.jpg" alt="Desarrollo Backend" class="responsive-image">
+        <h3>Backend</h3>
+        <p>Lógica escalable con Node.js, Django y tecnologías avanzadas.</p>
+      </div>
+      <div class="service-card">
+        <img src="05.jpg" alt="Bases de Datos" class="responsive-image">
+        <h3>Bases de Datos</h3>
+        <p>Gestión de MySQL, MongoDB y PostgreSQL.</p>
+      </div>
+    </section>
+
+    <section id="proceso">
+      <h2>Nuestro Proceso</h2>
+      <ol>
+        <li><strong>Análisis y Diseño:</strong> Escuchamos tus necesidades.</li>
+        <li><strong>Desarrollo:</strong> Implementamos tecnologías avanzadas.</li>
+        <li><strong>Pruebas y Despliegue:</strong> Garantizamos un lanzamiento exitoso.</li>
+        <li><strong>Mantenimiento:</strong> Mejoramos continuamente tu aplicación.</li>
+      </ol>
+      <button id="learnMoreBtn">Ver más detalles</button>
+      <p id="extraInfo" style="display: none;">Además de estos pasos, proporcionamos soporte técnico continuo para garantizar el éxito de tus proyectos.</p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <form id="contactForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+        
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  
+    <!-- Footer -->
+    <footer>
+        <div class="contact-info">
+            <p>&copy; 2024 Soluciones de Software. Todos los derechos reservados.</p>
+            <p>Contacto: info@empresa.com</p>
+        </div>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+  <script src="fullstack-solutions.js"></script>
+</body>
+</html>
