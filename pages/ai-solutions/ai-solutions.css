@@ -1,4 +1,9 @@
 /* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /* Estilos para el botón de regresar */
 .back-arrow-button {
@@ -297,4 +302,20 @@
         padding: 8px;
         font-size: 16px;
     }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .contact-info p {
+    margin-bottom: 10px;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    color: #fff;
 }
