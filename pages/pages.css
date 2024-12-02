@@ -159,3 +159,7 @@ footer .social-links a:hover {
         padding: 8px 16px;
     }
 }
+
+.logo img {
+    height: 70px;
+}

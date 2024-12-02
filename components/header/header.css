@@ -17,3 +17,7 @@ header {
     text-decoration: none;
     padding: 0 15px;
 }
+
+.logo img {
+    height: 70px;
+}
